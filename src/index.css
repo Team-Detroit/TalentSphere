@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@300;400;500;700;800&family=Share+Tech+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "JetBrains Mono", "Chivo Mono", ui-monospace, monospace;
+  --font-mono: "JetBrains Mono", "Share Tech Mono", monospace;
+}
+
+@layer utilities {
+  /* Dotted cyber grid overlay */
+  .bg-brutalist-grid {
+    background-size: 20px 20px;
+    background-image: 
+      radial-gradient(circle, rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
+  }
+
+  /* Scanlines filter for a true CRT monitor console clone */
+  .crt-lines {
+    background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%, 
+      rgba(0, 0, 0, 0.25) 50%
+    ), linear-gradient(
+      90deg, 
+      rgba(255, 0, 0, 0.03), 
+      rgba(0, 255, 0, 0.01), 
+      rgba(0, 0, 255, 0.03)
+    );
+    background-size: 100% 4px, 3px 100%;
+  }
+
+  /* Authentic Neo-Brutalist offset shadow classes */
+  .neo-shadow-white {
+    box-shadow: 4px 4px 0px 0px #ffffff;
+  }
+  .neo-shadow-white-lg {
+    box-shadow: 8px 8px 0px 0px #ffffff;
+  }
+  .neo-shadow-green {
+    box-shadow: 4px 4px 0px 0px #22c55e;
+  }
+  .neo-shadow-green-lg {
+    box-shadow: 8px 8px 0px 0px #22c55e;
+  }
+  .neo-shadow-black {
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
+
+  /* Dynamic hover mechanics for Brutalist buttons */
+  .neo-button-hover {
+    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .neo-button-hover:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px currentColor;
+  }
+  .neo-button-hover:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px currentColor;
+  }
+
+  /* Dynamic floating visual keyframe animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-8px) rotate(0.5deg);
+    }
+  }
+
+  /* Fade transitions reveal */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.99) translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0px);
+    }
+  }
+
+  .animate-float {
+    animation: float 4.5s ease-in-out infinite;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+/* Custom premium chunky retro scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020f08;
+  border-left: 2px solid #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border: 2px solid #020f08;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+/* Custom selection styling */
+::selection {
+  background-color: #22c55e;
+  color: #020f08;
+}
+
+/* GLOBAL UNIFIED NEO-BRUTALIST ARCHITECTURAL OVERRIDES */
+.rounded-xl, .rounded-2xl, .rounded-3xl, .rounded-lg, .rounded-md, .rounded-none {
+  border-radius: 0px !important;
+}
+
+/* Solid strong outlines on all structural widgets */
+.border, .border-white\/5, .border-white\/10, .border-white\/20, .border-slate-800, .border-indigo-500\/20, .border-cyan-400\/20 {
+  border: 2px solid #ffffff !important;
+}
+
+/* Solid forest green card fills */
+.bg-slate-950\/40, .bg-slate-900\/15, .bg-slate-950\/65, .bg-[#0D0D16]\/40, .bg-[#0D0D16]\/60, .bg-[#0A0A10], .bg-slate-900, .bg-slate-950, .bg-slate-800 {
+  background-color: #020e06 !important;
+}
+
+/* Flat white offset card shadow defaults and instant interactive response */
+.group:hover, .cursor-pointer:hover {
+  box-shadow: 4px 4px 0px 0px #22c55e !important;
+  border-color: #22c55e !important;
+}
+
+.hover\:border-cyan-500\/30:hover, .hover\:border-indigo-500\/30:hover {
+  border-color: #22c55e !important;
+  box-shadow: 4px 4px 0px 0px #22c55e !important;
+}
+
+/* Force monotonic grid for outer wrapper widgets */
+main {
+  background-color: #020f08 !important;
+  background-size: 24px 24px !important;
+  background-image: 
+    radial-gradient(circle, rgba(34, 197, 94, 0.15) 1.5px, transparent 1.5px) !important;
+}
+
+/* Styled text accents */
+.text-cyan-400, .text-indigo-400, .text-purple-400, .text-amber-500, .text-emerald-400 {
+  color: #22c55e !important;
+}
+
+/* Active sync status lines */
+.text-emerald-500 {
+  color: #22c55e !important;
+}
+

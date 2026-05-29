@@ -1,0 +1,6 @@
+{
+  "name": "TalentSphere",
+  "description": "A premium Student Talent Intelligence Platform that helps students build a verified digital identity, combining academic credentials, projects, certifications, internships, achievements, and coding profiles into a single dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
